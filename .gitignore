@@ -1,0 +1,12 @@
+target/
+.idea/
+*.iml
+.DS_Store
+*.so
+.settings/
+.project
+.classpath
+data/
+.metals/
+.vscode/
+a.log
