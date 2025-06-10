@@ -1,0 +1,17 @@
+
+
+
+spring:
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      maxLifeTime : 600000 #10 minutes wait time  url: http://events.devops.sit.xiaohongshu.com
+
+
+#  测试环境账号。
+#  user:offline_engine_platform_rw
+#  password:HlBXkQjbNkhsd9*I
+#  host:mysql-data-dev-master.int.xiaohongshu.com
+#  port:33071
+#  dbname:offline_engine_platform
+

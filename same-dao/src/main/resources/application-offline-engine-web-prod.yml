@@ -1,0 +1,15 @@
+#  生产地址
+#  mysql -u offline_engine_platform_rw -p'GbvmKcjSEfrZq3*T' -P33071 -hmysql-offline-engine-platf-rs01-master.int.xiaohongshu.com offline_engine_platform
+#spring.datasource:
+#  offline-engine-web:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    jdbc-url: jdbc:mysql://mysql-offline-engine-platf-rs01-master.int.xiaohongshu.com:33071/offline_engine_platform?useSSL=false&amp
+#    username: offline_engine_platform_rw
+#    password: GbvmKcjSEfrZq3*T
+
+spring:
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      maxLifeTime : 600000 #10 minutes wait time  url: http://events.devops.sit.xiaohongshu.com
+

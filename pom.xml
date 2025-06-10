@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 项目基本信息 -->
-    <groupId>com.same</groupId>
-    <artifactId>same-recommend-system</artifactId>
+    <groupId>com.samenew.engine.platform</groupId>
+    <artifactId>same-engine-system</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -28,9 +28,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tensorflow.hadoop.version>1.15.0</tensorflow.hadoop.version>
         <spring.boot.version>2.2.6.RELEASE</spring.boot.version>
         <swagger-version>3.0.0</swagger-version>
         <httpclient.version>4.5.13</httpclient.version>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="mysql" targetRuntime="MyBatis3">
+        <property name="autoDelimitKeywords" value="true" />
+        <property name="beginningDelimiter" value="`" />
+        <property name="endingDelimiter" value="`" />
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://mysql-data-dev-master.int.xiaohongshu.com:33071/offline_engine_platform?useSSL=false&amp;allowPublicKeyRetrieval=true"
+                        userId="offline_engine_platform_rw"
+                        password="HlBXkQjbNkhsd9*I">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.red.rec.offline.engine.po"
+                            targetProject="./offline-engine-web-dao/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        
+        <sqlMapGenerator targetPackage="mapper.offlineenginewebdao"
+                         targetProject="./offline-engine-web-dao/src/main/resources/">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="MIXEDMAPPER"
+                             targetPackage="com.red.rec.offline.engine.mapper.auto"
+                             targetProject="./offline-engine-web-dao/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        
+<!--        <table tableName="offline_engine_kafka_topic" domainObjectName="OfflineEngineKafkaTopic">-->
+<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--        </table>-->
+
+        <!--        <table tableName="offline_platform_list" domainObjectName="OfflinePlatformListDo">-->
+        <!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--        </table>-->
+
+        <table tableName="offline_platform_breakdown" domainObjectName="OfflinePlatformBreakdownDo">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride column="job_detail" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <columnOverride column="job_other_info" javaType="java.lang.String" jdbcType="VARCHAR" />
+        </table>
+
+<!--        <table tableName="offline_platform_breakdown_config" domainObjectName="OfflinePlatformBreakdownConfigDo">-->
+<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--            <columnOverride column="config_content" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="config_other_info" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+
+
+<!--        <table tableName="offline_platform_breakdown_task" domainObjectName="OfflinePlatformBreakdownTaskDo">-->
+<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--            <columnOverride column="task_content" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--            <columnOverride column="task_other_info" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--        </table>-->
+
+
+
+
+<!--            <table tableName="offline_platform_lastn" domainObjectName="OfflinePlatformLastnDo">-->
+<!--                <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--                <columnOverride column="job_detail" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--                <columnOverride column="job_other_info" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--            </table>-->
+
+<!--            <table tableName="offline_platform_lastn_config" domainObjectName="OfflinePlatformLastnConfigDo">-->
+<!--                <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--                <columnOverride column="config_content" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--                <columnOverride column="config_other_info" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--            </table>-->
+
+
+<!--            <table tableName="offline_platform_lastn_task" domainObjectName="OfflinePlatformLastnTaskDo">-->
+<!--                <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--                <columnOverride column="task_content" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--                <columnOverride column="task_other_info" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+<!--            </table>-->
+
+
+<!--        <table tableName="lastn_mysql_test_table" domainObjectName="OfflinePlatformLastn">-->
+<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--        </table>-->
+
+
+            <table tableName="offline_platform_lock" domainObjectName="OfflinePlatformLockDo">
+                <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            </table>
+
+
+    </context>
+</generatorConfiguration>
