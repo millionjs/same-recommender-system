@@ -1,4 +1,4 @@
-create table offline_platform_lastn
+create table same_platform_project
 (
     id                       int auto_increment comment '主键'
         primary key,
@@ -30,16 +30,9 @@ create table offline_platform_lastn
     all_task_status_success  int                                 null comment '所有task的成功信息。',
     all_task_status_number   int                                 null comment '本任务的 task数量。',
     latest_changer           varchar(300)                        null comment '最近修改人'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT = 'Lastn 任务列表, 用于管理任务列表信息。';
-
--- alter table offline_platform_lastn
---     add need_update_template int default 0 null comment '是否：需要进行新建模板。';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT = 'Breakdown任务列表, 用于管理任务列表信息。';
 
 
--- alter table offline_platform_lastn
---     add user_template_group_name varchar(300) null comment '(额外信息) 用户自定义分组名称。';
-
-
-alter table offline_platform_lastn
+alter table offline_platform_breakdown
     add feature_level varchar(100)  null comment '特征等级。';
 

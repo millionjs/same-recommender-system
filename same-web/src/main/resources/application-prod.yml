@@ -9,30 +9,30 @@ server:
   port: 18081
   servlet:
     context-path: /api
-
-spring.datasource:
-    offline-engine:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://mysql-offline-engine-platf-rs01-master.int.xiaohongshu.com:33071/offline_engine_platform?useSSL=false&serverTimezone=Asia/Shanghai
-      username: offline_engine_platform_rw
-      password: GbvmKcjSEfrZq3*T
-      type: com.alibaba.druid.pool.DruidDataSource
-      initialSize: 5
-      minIdle: 10
-      maxActive: 100
-      maxWait: 60000
-      timeBetweenEvictionRunsMillis: 60000
-      minEvictableIdleTimeMillis: 300000
-      validationQuery: SELECT 1
-      testWhileIdle: true
-      testOnBorrow: false
-      testOnReturn: false
-      poolPreparedStatements: true
-      keepAlive: true
-      maxPoolPreparedStatementPerConnectionSize: 20
-      useGlobalDataSourceStat: true
-      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-      filters: stat,wall
+#
+#spring.datasource:
+#    offline-engine:
+#      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://mysql-offline-engine-platf-rs01-master.int.xiaohongshu.com:33071/offline_engine_platform?useSSL=false&serverTimezone=Asia/Shanghai
+#      username: offline_engine_platform_rw
+#      password: GbvmKcjSEfrZq3*T
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      initialSize: 5
+#      minIdle: 10
+#      maxActive: 100
+#      maxWait: 60000
+#      timeBetweenEvictionRunsMillis: 60000
+#      minEvictableIdleTimeMillis: 300000
+#      validationQuery: SELECT 1
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      poolPreparedStatements: true
+#      keepAlive: true
+#      maxPoolPreparedStatementPerConnectionSize: 20
+#      useGlobalDataSourceStat: true
+#      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#      filters: stat,wall
 
 
 spring:
@@ -44,17 +44,6 @@ spring:
 logging:
   level:
     root: info
-
-
-kafka:
-  servers: rec-session2-kafka-qcsh4-dr01.int.xiaohongshu.com:6667,rec-session2-kafka-qcsh4-dr02.int.xiaohongshu.com:6667,rec-session2-kafka-qcsh4-dr03.int.xiaohongshu.com:6667
-  partitions: 4
-  replicas: 2
-  kafka-meta:
-    url: http://events.int.xiaohongshu.com/api/kmeta
-
-richo:
-  url: https://droom.devops.xiaohongshu.com
 
 swagger:
   server-list:

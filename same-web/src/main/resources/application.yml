@@ -15,14 +15,15 @@ app:
 
 server:
   port: 18081
+#  address: 0.0.0.0
   servlet:
     context-path: /api
 
-mybatis:
-  type-aliases-package: com.red.rec.offline.engine.mapper
-  configuration:
-    map-underscore-to-camel-case: true
-    cache-enabled: false
+#mybatis:
+#  type-aliases-package: com.red.rec.offline.engine.mapper
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
 
 spring.jpa:
   database: MySQL

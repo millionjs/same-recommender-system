@@ -11,7 +11,8 @@ public class CommonApiServiceImpl implements CommonApiService {
 
     @Override
     public Result getModuleTest() {
-        return Result.success("Test result success.");
+        log.info("getModuleTest api，信息为:[{}]", "success");
+        return Result.success("Test ping success.");
     }
 
 }
