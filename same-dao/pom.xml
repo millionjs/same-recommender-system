@@ -93,16 +93,6 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.red.rec.offline.engine.platform</groupId>-->
-<!--            <artifactId>offline-engine-common</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.8.jre6</version>
-        </dependency>
+
     </dependencies>
 </project>
