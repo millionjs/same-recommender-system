@@ -1,0 +1,10 @@
+
+
+spring:
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      maxLifeTime : 600000 #10 minutes wait time  url: http://events.devops.sit.xiaohongshu.com
+
+
+

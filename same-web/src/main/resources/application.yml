@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: sit
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+app:
+  id: same-microservice-engine
+
+#apollo:
+#  autoUpdateInjectedSpringProperties: true
+#  bootstrap:
+#    enabled: true
+
+server:
+  port: 18081
+  servlet:
+    context-path: /api
+
+mybatis:
+  type-aliases-package: com.red.rec.offline.engine.mapper
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+spring.jpa:
+  database: MySQL
+  show-sql: true
+  hibernate.ddl-auto: none
+  generate-ddl: false
+
+logging:
+  config: classpath:logback-spring.xml
+
+swagger:
+  server-list:
+    - http://localhost:18081/api
+

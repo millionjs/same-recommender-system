@@ -1,0 +1,12 @@
+<configuration scan="false" debug="false">
+    <!-- 尽量别用绝对路径，如果带参数不同容器路径解释可能不同 -->
+    <property name="LOG_HOME" value="log/"/>
+    <!-- 在 K8S 环境下收集日志时，依赖 APPID 和 PRD_LINE 参数 -->
+    <property name="APPID" value="offline-engine-web"/>
+    <property name="PRD_LINE" value="rec"/>
+    <property name="MAIN_LOG_FILE" value="server.log" />
+
+    <include resource="com/xiaohongshu/infra/logback/defaults.xml"/>
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+</configuration>
