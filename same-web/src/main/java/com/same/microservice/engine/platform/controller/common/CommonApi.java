@@ -20,13 +20,15 @@ public class CommonApi {
 
     @GetMapping("/test")
     public Result getTest() {
+        log.info("test api，信息为:[{}]", "success");
         JSONObject result = new JSONObject();
         result.put("result", "success");
         return Result.success(result);
     }
 
-    @GetMapping("/get_module_test")
+    @GetMapping("/ping")
     public Result getTestMysql() {
+        log.info("ping api，信息为:[{}]", "success");
         return Result.success(commonApiService.getModuleTest());
     }
 

@@ -13,6 +13,7 @@ public class PingController {
     @RequestMapping(value = "/ping", method = RequestMethod.GET)
     @ResponseBody
     public Result ping() {
+
         return Result.success("pong");
     }
 }

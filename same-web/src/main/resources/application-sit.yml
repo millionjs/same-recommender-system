@@ -9,30 +9,30 @@ server:
   port: 18081
   servlet:
     context-path: /api
-
-spring.datasource:
-  offline-engine:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://mysql-data-dev-master.int.xiaohongshu.com:33071/offline_engine_platform?useSSL=false&useTimezone=true&serverTimezone=Asia/Shanghai
-    username: offline_engine_platform_rw
-    password: HlBXkQjbNkhsd9*I
-    type: com.alibaba.druid.pool.DruidDataSource
-    initialSize: 5
-    minIdle: 10
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    keepAlive: true
-    maxPoolPreparedStatementPerConnectionSize: 20
-    useGlobalDataSourceStat: true
-    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-    filters: stat,wall,log4j2
+#
+#spring.datasource:
+#  offline-engine:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://mysql-data-dev-master.int.xiaohongshu.com:33071/offline_engine_platform?useSSL=false&useTimezone=true&serverTimezone=Asia/Shanghai
+#    username: offline_engine_platform_rw
+#    password: HlBXkQjbNkhsd9*I
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    initialSize: 5
+#    minIdle: 10
+#    maxActive: 20
+#    maxWait: 60000
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: SELECT 1
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    keepAlive: true
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    useGlobalDataSourceStat: true
+#    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#    filters: stat,wall,log4j2
 
 logging:
   level:
@@ -44,9 +44,8 @@ spring:
       connection-test-query: SELECT 1
       maxLifeTime : 600000
 
-#eds.hosts: 10.4.44.53:80
 
 swagger:
   server-list:
-    - https://enginex-offline-platform.devops.sit.xiaohongshu.com/api
+    - https://local/api
 
